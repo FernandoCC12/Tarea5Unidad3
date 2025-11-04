@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: helvetica;
+  font-size: 13px;
+  line-height: 12px;
+  color:#333;
+}
+.ancho {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 800px;
+}
+.margen {
+    padding: 10px;
+}
+.centrar {
+    text-align: center;
+}
+.recuadro_rosa {
+  max-width: 100%;
+  height: 15px;
+  background-color: #ff3281;
+}
+
+.recuadro_crema{
+  max-width: 100%;
+  height: auto;
+  background-color: #fff9f1;
+}
+
+.imagenes1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img_spa img{
+  width: 70%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle; 
+}
+
+.redessociales img{
+  width: 20%;
+  height: auto;
+  display: inline-block;
+  text-align: right;
+}
+
+.caja_negra {
+  border: 2px black solid;
+  height: 30px;
+}
+.menu p{
+  display: inline-block;
+  margin-right: 125px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fondo_img {
+  background-image: url(imagenes/fondopiedras.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+}
+
+.texto_promocion {
+  color: white;
+}
+.texto_promocion h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 100px;
+}
+.texto_promocion p{
+  text-align: center;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.btn1 a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px; 
+  border: 2px #ff3281 solid;
+  color: white;
+  text-decoration: none;
+}
+
+.btn1 a:hover {
+  background-color: #ff3281;
+}
+
+.producto {
+  display: flex;
+}
+
+.texto_lorem {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  line-height: 2;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.foto_vela {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.foto_vela img {
+  width: 100%;
+  height: auto;
+}
+.recuadro_crema {
+  display: block;
+  width: 100%;
+}
+
+.foto_aromatizante img {
+  height: 300px;
+  border-radius: 30px;
+}
+.foto_aromatizante {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+
+.texto_empleo {
+  height: 300px;
+  width: 380px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.info_spa h1 {
+  font-size: 25px;
+}
+.info_spa {
+  width: 380px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  line-height: 1;
+}
+.rosa {
+  color: #ff3281;
+  font-weight: bold;
+}
+.formulario {
+  border: 2px #ff3281 solid;
+  padding: 10px;
+}
+.correocolor {
+  font-weight: bold;
+}
+.elemento {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  border: 2px #ececec solid; 
+}
+.btn_enviar {
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  border: 0px;
+  cursor: pointer;
+}
+.video {
+  width: 380px;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+video {
+  width: 100%;
+  height: auto; 
+}
+.datos {
+  display: flex;
+}
+
+.img_spa img{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.dato_alumno {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.dato_alumno h3 {
+  text-align: right;
+  text-align: justify; 
+  line-height: 1;
+  letter-spacing: 1.5; 
+  margin-top: 10px;
+}

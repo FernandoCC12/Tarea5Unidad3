@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="recuadro_rosa"></div>
+    <div class="recuadro_crema">
+        <div class="imagenes1 ancho">
+            <div class="img_spa">
+                <img src="imagenes/logocabecera.jpg" alt="">
+            </div>
+            <div class="redessociales">
+                <img src="imagenes/icono_facebook.jpg" alt="">
+                <img src="imagenes/icono_instagram.jpg" alt="">
+                <img src="imagenes/icono_twitter.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="recuadro_crema">
+        <div class="caja_negra ancho">
+            <div class="menu centrar">
+                <p>Galeria</p>
+                <p>Precio</p>
+                <p>Contactanos</p>
+                <p>Equipo</p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="fondo_img">
+        <div class="texto_promocion margen">
+            <h1>PROMOCIONES DE MARZO</h1>
+            <br>
+            <p>Se acerca la epoca de playa y por eso preparamos estas dos <br> promociones ideales para ti.</p>
+        </div>
+        <div class="btn1 centrar">
+            <a href="#">Solicitar Promocion</a>
+            <a href="#">ver Video</a>
+        </div>
+    </div>
+    <br>
+    <div class="ancho producto">
+        <div class="texto_lorem">
+            <h2>Los productos Science of Beauty</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid labore omnis, et dolor ad in deserunt hic animi recusandae adipisci facere placeat quia perferendis, laboriosam iusto laborum ipsa ipsam inventore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sunt dolore fugiat nostrum, quos</p>
+        </div>
+        <div class="foto_vela">
+            <img src="imagenes/fotovelas.jpg" alt="">
+        </div>
+    </div>
+    <br><br>
+    <div class="recuadro_crema centrar">
+            <br><br>
+            <h1 >Buscamos talento para integrarlos a nuestro equipo</h1>
+            <br><br>
+            <div class="foto_aromatizante">
+                <img src="imagenes/fotoaromatizante.jpg" alt="#">
+            </div>
+            <div class="texto_empleo">
+                <h3>Puesto de trabajo para Recepcionista</h3>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum blanditiis atque earum exercitationem saepe! Maiores consequatur placeat, repellendus error quae deleniti, inventore tempore quis earum ipsum suscipit! Ducimus, eum rem.</p>
+                <br>
+                <h3>Puesto de trabajo para Masajista</h3>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quibusdam ex minus quo libero possimus, dolore unde labore sint in rem ipsum, molestias, id nihil accusamus totam dolor non delectus?</p>
+                <br>
+                <h3>Puesto de trabajo para Nutriologo</h3>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nam, libero excepturi hic beatae commodi dolore velit ipsa corporis modi minus inventore laboriosam temporibus mollitia voluptatum consequuntur perspiciatis eveniet. Exercitationem.</p>
+            </div>
+            <br><br>
+    </div>
+    <br><br>
+    <div class="ancho">
+        <div class="info_spa">
+            <h1>Recibe noticias y promociones de SPA SALON</h1>
+            <p>Un lugar para consentirte de pies a cabeza</p>
+            <p>Servicio de salón estética y Spa personalizado</p>
+            <br>
+            <p><span class="rosa">TELEFONO:</span> 999 420 8871</p>
+            <br>
+            <p><span class="rosa">CORREO:</span> info@spasalon.com</p>
+            <br>
+            <div class="formulario">
+                <form action="#" method="post">
+                    <br>
+                    <label for="email" class="correocolor">Tu dirección de correo electrónico</label>
+                    <br><br>
+                    <input type="email" id="email" name="email" placeholder="tunombre@example.com" class="elemento">
+                    <br><br>
+                    <button type="submit" class="btn_enviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="video">
+            <h1>Nuestras Instalaciones</h1>
+            <br><br>
+            <div class="video-container" style="text-align: center;">
+                <iframe width="462" height="260" src="https://www.youtube.com/embed/w4qaODLR_Xg?si=SOHpAc8NoIj8BMHt" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Al enviar el formulario
+            $("form").submit(function(event) {
+                event.preventDefault(); // Evitar que se recargue la página
+                const email = $("#email").val(); // Obtener el valor del input
+
+                // Validar el formato del correo
+                const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (regex.test(email)) {
+                    // Si el correo es válido, mostrar un mensaje de éxito
+                    $(".formulario").html("<p>¡Correo enviado correctamente!</p>");
+
+                    // Modificar la URL para reflejar el correo enviado (query string)
+                    window.history.pushState({}, '', '?email=' + encodeURIComponent(email));
+                } else {
+                    // Si el correo no es válido, mostrar un mensaje de error
+                    $(".formulario").html("<p style='color: red;'>Por favor, ingresa un correo electrónico válido.</p>");
+                }
+            });
+        });
+    </script>
+    <br><br><br><br>
+    <div class="recuadro_crema datos">
+        <div class="img_spa ancho ">
+            <img src="imagenes/logo_spa.png" alt="">
+        </div>
+        <div class="dato_alumno ancho">
+            <h3>Nombre: Cristian Fernando Caamal Canul</h3>
+            <h3>Materia: Programación web</h3>
+            <h3>Grupo:7SB</h3>
+            <br><br>
+        </div>
+    </div>
+
+    <div class="recuadro_rosa"></div>
+</body>
+</html>
